@@ -24,9 +24,25 @@
 }
 
 .card-wrapper {
-  padding: 20px;
+  margin-left: 20px;
   display: flex;
   flex-direction: row;
   gap: 50px;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px){
+  .product-listing-body > :nth-child(1){
+    flex: 0 0 30%;
+  }
+}
+
+@media screen and (max-width: 920px){
+  .product-listing-body > :nth-child(1){
+    flex: 0 0 30%;
+  }
+  .card-wrapper{
+    justify-content: center;
+    align-items: center;
+  }
 }
