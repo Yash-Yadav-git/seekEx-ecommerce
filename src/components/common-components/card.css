@@ -1,0 +1,60 @@
+@import url('../../index.css');
+
+.card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  object-fit: cover;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.description1 {
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.price-wrapper{
+    margin-top: 10px;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.discount{
+    font-weight: 500;
+    font-size: 10px;
+    color: red;
+}
+
+.card-sizes {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin:  15px 0;
+}
+
+.size {
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  box-shadow: none;
+  border: 2px solid #E6E6E6;
+  font-weight: 400;
+  font-size: 14px;
+}
