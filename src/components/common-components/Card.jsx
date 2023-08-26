@@ -9,7 +9,7 @@ const Card = () => {
   return (
     <article class="card">
       <div className="card-image-wrapper">
-        <img src={image1} alt="Product Image" class="card-image" />
+        <img src={image1} alt="Product Image" class="card-image" loading="lazy" />
         <div className="produt-cta-wrapper">
           <div className="prouct-cta">
             <img src={cartIcon} alt="Product Cta" class="product-cta-icon" />

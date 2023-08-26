@@ -68,17 +68,20 @@
   position: relative;
 }
 
-.card-image-wrapper:hover .produt-cta-wrapper{
-    visibility: initial;
-}
-
 .produt-cta-wrapper {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  visibility: hidden;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+.card-image-wrapper:hover .produt-cta-wrapper{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .prouct-cta {
