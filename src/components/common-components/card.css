@@ -1,4 +1,4 @@
-@import url('../../index.css');
+@import url("../../index.css");
 
 .card {
   display: flex;
@@ -22,31 +22,31 @@
 }
 
 .description1 {
-    font-weight: 400;
-    margin-top: 5px;
-    font-size: 14px;
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
-.price-wrapper{
-    margin-top: 10px;
+.price-wrapper {
+  margin-top: 10px;
 }
 
-.price{
-    font-weight: 700;
-    font-size: 18px;
+.price {
+  font-weight: 700;
+  font-size: 18px;
 }
 
-.discount{
-    font-weight: 500;
-    font-size: 10px;
-    color: red;
+.discount {
+  font-weight: 500;
+  font-size: 10px;
+  color: red;
 }
 
 .card-sizes {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin:  15px 0;
+  margin: 15px 0;
 }
 
 .size {
@@ -54,7 +54,41 @@
   color: black;
   padding: 10px;
   box-shadow: none;
-  border: 2px solid #E6E6E6;
+  border: 2px solid #e6e6e6;
   font-weight: 400;
   font-size: 14px;
+}
+
+.card-image:hover {
+  filter: blur(4px);
+  cursor: pointer;
+}
+
+.card-image-wrapper {
+  position: relative;
+}
+
+.card-image-wrapper:hover .produt-cta-wrapper{
+    visibility: initial;
+}
+
+.produt-cta-wrapper {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  visibility: hidden;
+}
+
+.prouct-cta {
+  border-radius: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-cta-icon {
+  padding: 7px;
 }
