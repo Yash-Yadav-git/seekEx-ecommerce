@@ -1,38 +1,32 @@
 .container {
   margin: 0;
-  /* padding: 30px; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-/* .navbar-wrapper {
-  height: 200px;
-} */
-
 .product-listing-body {
   margin: 0;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
+  height: 100vh;
 }
 
 .product-listing-body > :nth-child(1) {
-  flex: 10%;
-  border: 2px solid red;
+  flex: 0 0 15%;
+  border: 2px solid #e6e6e6;
+  position: sticky;
+  top: 0;
 }
 
 .product-listing-body > :last-child {
-  flex: 70%;
-  /* border: 2px solid black; */
+  flex: 1;
+  overflow-y: auto;
 }
 
-.card-wrapper{
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    flex-wrap: wrap;
-
+.card-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
 }

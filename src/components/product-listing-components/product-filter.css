@@ -1,0 +1,28 @@
+@import url('../../index.css');
+
+
+.product-filter-heading {
+    padding-left: 30px;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+.product_filter_divider{
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.categories-wrapper{
+    padding-left: 30px;
+    margin-bottom: 30px;
+}
+
+.filter-cetgories_group{
+    padding-left: 20px;
+}
+.product-filter-ranges{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
