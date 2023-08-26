@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/common-components/Navbar";
 import ProductFilter from "../../components/product-listing-components/ProductFilter";
 import Card from "../../components/common-components/Card";
+import productImage1 from "../../static/card-component/product-image-1.png";
+import productImage2 from "../../static/card-component/product-image-2.png";
+import productImage3 from "../../static/card-component/product-image-3.png";
+import productImage4 from "../../static/card-component/product-image-4.png";
 import "./productlisting.css";
 
 const ProductListingPage = () => {
-  let cardArray = new Array(50).fill({});
-  console.log(cardArray.length, cardArray);
+  let cardArray = new Array(10).fill({ image: productImage1 });
+  let cardArray1 = new Array(10).fill({ image: productImage2 });
+  let cardArray2 = new Array(10).fill({ image: productImage3 });
+  let cardArray3 = new Array(10).fill({ image: productImage4 });
+  let finalArray = [...cardArray, ...cardArray1, ...cardArray2, ...cardArray3];
+  console.log("Final array is", finalArray);
+  useEffect(() => {
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log("inside content loaded");
+      let imageTags = document.querySelectorAll(".card-image");
+      console.log(imageTags);
+    });
+    console.log("Inside use Effect");
+  }, []);
   return (
     <div className="container">
       <header className="navbar-wrapper">
@@ -16,8 +32,8 @@ const ProductListingPage = () => {
       <section className="product-listing-body">
         <ProductFilter />
         <div className="card-wrapper">
-          {cardArray.map(() => (
-            <Card />
+          {finalArray.map((x, index) => (
+            <Card image={x.image} />
           ))}
         </div>
       </section>
