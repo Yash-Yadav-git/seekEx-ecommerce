@@ -14,14 +14,12 @@ const ProductListingPage = () => {
   let cardArray2 = new Array(10).fill({ image: productImage3 });
   let cardArray3 = new Array(10).fill({ image: productImage4 });
   let finalArray = [...cardArray, ...cardArray1, ...cardArray2, ...cardArray3];
-  console.log("Final array is", finalArray);
   useEffect(() => {
     document.addEventListener("DOMContentLoaded", () => {
       console.log("inside content loaded");
       let imageTags = document.querySelectorAll(".card-image");
-      console.log(imageTags);
     });
-    console.log("Inside use Effect");
+
   }, []);
   return (
     <div className="container">

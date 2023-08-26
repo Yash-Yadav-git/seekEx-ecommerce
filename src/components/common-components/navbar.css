@@ -8,6 +8,7 @@
 }
 
 .nav-cta-icons{
+    flex: 0 0 15%;
     display: flex;
     justify-content: space-between;
 }
