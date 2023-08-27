@@ -14,7 +14,7 @@ const MiddleBannerSection = () => {
             <img src={bannerBaggy} />
             <img src={bannerWinter} />
         </div>
-        <div className="product-category-section">
+        <div className="product-category-section-2">
             <img src={bannerWomens} />
             <img src={bannerBestDeals} />
             <img src={bannerTrendy} />
