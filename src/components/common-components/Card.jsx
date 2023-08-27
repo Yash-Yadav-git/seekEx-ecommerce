@@ -10,45 +10,12 @@ import { useRef } from "react";
 const Card = ({ image }) => {
   const [isImageHovered, setIsImageHovered] = useState(false);
   const cardRef = useRef();
-
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-      childList: true,
-      attributes: true,
-    };
-
-    const observer = new MutationObserver((entries) => {
-      console.log("Inside callback funct");
-      entries.forEach((entry) => {
-        console.log("array called");
-        if (entry.isIntersecting) {
-          entry.target.classList.add("animate");
-          console.log("Class list added", entry.target.classList);
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    if (cardRef.current) {
-      console.log("Inside if cardRef");
-      // observer.observe(cardRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
+  
   const addHoverClass = () => {
-    // imageRef.current.classList.add('image-blur')
     setIsImageHovered(true);
   };
 
   const removeHoverClass = () => {
-    // imageRef.current.classList.remove('image-blur')
     setIsImageHovered(false);
   };
 

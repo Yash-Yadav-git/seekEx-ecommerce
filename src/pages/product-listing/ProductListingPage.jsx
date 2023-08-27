@@ -19,7 +19,6 @@ const ProductListingPage = () => {
       console.log("inside content loaded");
       let imageTags = document.querySelectorAll(".card-image");
     });
-
   }, []);
   return (
     <div className="container">

@@ -5,6 +5,7 @@
     inset: 0;
     background: #1F1F1F;
     text-align: center;
+    z-index: 1;
 }
 
 .homepage-heading{

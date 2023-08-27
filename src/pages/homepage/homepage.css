@@ -1,2 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;700&family=Montserrat:ital,wght@0,500;0,700;1,400&family=Playfair+Display:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@300;400;700&family=Montserrat:ital,wght@0,500;0,700;1,400&family=Playfair+Display:wght@600&display=swap");
 
+.trednig-product-section {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+}
+
+.trending-product-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trending-product-heading h1 {
+  margin: 0 40px;
+}
+
+.line {
+  flex: 1;
+}
+
+.trending-product-heading div {
+  height: 2px;
+  background-color: #ffc7d1;
+}
+
+.trending-product-heading .line:before,
+.trending-product-heading .line:after {
+  content: "";
+  display: block;
+  width: 200px;
+  background-color: #770015;
+}
+
+.trending-product-heading .line:after {
+  margin-left: 10px;
+}
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.homepage-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.trending-product-cta {
+  border: none;
+  padding: 20px;
+  background-color: #770015;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 170px;
+  cursor: pointer;
+}
+
+.homepage-product-collection {
+  width: 100%;
+  margin-top: 40px;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-prcduct-collection-image-wrapper {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 450px;
+  position: relative;
+}
+
+.homepage-product-collection-text-wrapper {
+  position: absolute;
+  bottom: 0;
+  top: 85%;
+  background: linear-gradient(
+    137deg,
+    rgba(255, 255, 255, 0.4) 0.55%,
+    rgba(255, 255, 255, 0.01) 100%
+  );
+  backdrop-filter: blur(32px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.homepgae-product-collection-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

@@ -1,0 +1,70 @@
+@import url("../../../pages/homepage/homepage.css");
+@import url("../../../index.css");
+
+.trednig-product-section {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+}
+
+.trending-product-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.trending-product-heading h1 {
+  margin: 0 40px;
+}
+
+.line {
+  flex: 1;
+}
+
+.trending-product-heading div {
+  height: 2px;
+  background-color: #ffc7d1;
+}
+
+.trending-product-heading .line:before,
+.trending-product-heading .line:after {
+  content: "";
+  display: block;
+  width: 200px;
+  background-color: #770015;
+}
+
+.trending-product-heading .line:after {
+  margin-left: 10px;
+}
+
+.wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.homepage-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+}
+
+.trending-product-cta {
+  border: none;
+  padding: 20px;
+  background-color: #770015;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  width: 170px;
+  cursor: pointer;
+}
