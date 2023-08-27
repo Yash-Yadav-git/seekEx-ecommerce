@@ -1,0 +1,20 @@
+@import url('../../pages/homepage/homepage.css');
+.categories-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Playfair Display', serif;  
+    font-weight: 600; 
+}
+
+.categories-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+
