@@ -18,6 +18,8 @@ import productCollectionPrinted from "../../static/homepage/product-collection-r
 import productCollectionOversized from "../../static/homepage/product-collection-oversized-1.svg";
 import productCollectionHalfSleeves from "../../static/homepage/product-collection-half-sleeves-1.svg";
 import banner3 from "../../static/homepage/banner-3.svg";
+import daimond from '../../static/homepage/diamond 1.svg'
+import discount from '../../static/homepage/discount 1.svg'
 
 const Homepage = () => {
   let tredingProducts = [
@@ -107,6 +109,25 @@ const Homepage = () => {
       </div>
 
       <Banner image={banner3} />
+      {/* Huury Up Section */}
+      <div className="homepage-hurryup-container">
+        <div className="hurryup-section">
+          <img src={daimond} />
+          <span className="hurrup-heading-1">Hurry Up!</span>
+          <span className="hurrup-heading-2">85% OFF</span>
+          <span className="hurrup-heading-3">Sale</span>
+          <button className="hurryup-cta">Shop Now</button>
+        </div>
+        <div className="hurryup-section-2">
+          <img src={discount} />
+          <span className="hurrup-heading-1">Hurry Up!</span>
+          <span className="hurrup-heading-2">85% OFF</span>
+          <span className="hurrup-heading-3">Sale</span>
+          <button className="hurryup-cta">
+            <label>Shop Now</label>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
