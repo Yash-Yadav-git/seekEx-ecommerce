@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 const LazyLoadedImage = ({
   image,
   placeholderImage,
@@ -10,7 +11,6 @@ const LazyLoadedImage = ({
 }) => {
   const [imageSource, setImageSource] = useState(placeholderImage);
   const imageRef = useRef();
-  const [isImageHovered, setIsImageHovered] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver((enteries) => {
@@ -19,41 +19,30 @@ const LazyLoadedImage = ({
           if (entry.isIntersecting) {
             setImageSource(image);
             entry.target.classList.add("animate");
-            console.log('Class list added', entry.target.classList)
+            console.log("Class list added", entry.target.classList);
             observer.unobserve(imageRef.current);
           }
-         })
+        });
       }
     });
 
     if (imageRef && imageRef.current) {
       observer.observe(imageRef.current);
     }
-
-
   }, [imageSource]);
-  const addHoverClass = () => { 
-    // imageRef.current.classList.add('image-blur')
-    setIsImageHovered(true)
-  }
-
-  const removeHoverClass = () => { 
-    // imageRef.current.classList.remove('image-blur')
-    setIsImageHovered(false)
-  }
-
+  const hanldeImageRedirection = () => {};
   return (
-    <img
-      ref={imageRef}
-      src={imageSource}
-      alt={alt || ""}
-      className={!isImageHovered ? `${className}` : `${className} image-blur`}
-      width={width}
-      height={height}
-      loading={lazyloading ? "lazy" : "eager"}
-      onMouseEnter={addHoverClass}
-      onMouseLeave={removeHoverClass}
-    />
+    <Link to="product-details">
+      <img
+        ref={imageRef}
+        src={imageSource}
+        alt={alt || ""}
+        className={className}
+        width={width}
+        height={height}
+        loading={lazyloading ? "lazy" : "eager"}
+      />
+    </Link>
   );
 };
 

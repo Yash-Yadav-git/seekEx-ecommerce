@@ -4,56 +4,67 @@ import wishlistIcon from "../../static/card-component/wishlist_vector.png";
 import cartIcon from "../../static/card-component/cart_vector.png";
 import placeholderImage from "../../static/card-component/placeholder-main-image.png";
 import LazyLoadedImage from "./LazyLoadedImage";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 
 const Card = ({ image }) => {
+  const [isImageHovered, setIsImageHovered] = useState(false);
+  const cardRef = useRef();
 
-  const cardRef = useRef()
-
-  useEffect(() => { 
+  useEffect(() => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
       threshold: 0.5,
       childList: true,
-      attributes: true
+      attributes: true,
     };
 
     const observer = new MutationObserver((entries) => {
-      console.log('Inside callback funct')
+      console.log("Inside callback funct");
       entries.forEach((entry) => {
-        console.log('array called')
+        console.log("array called");
         if (entry.isIntersecting) {
           entry.target.classList.add("animate");
-          console.log('Class list added',entry.target.classList)
+          console.log("Class list added", entry.target.classList);
           observer.unobserve(entry.target);
         }
       });
     });
 
     if (cardRef.current) {
-      console.log('Inside if cardRef')
+      console.log("Inside if cardRef");
       // observer.observe(cardRef.current);
     }
-
 
     return () => {
       observer.disconnect();
     };
+  }, []);
 
+  const addHoverClass = () => {
+    // imageRef.current.classList.add('image-blur')
+    setIsImageHovered(true);
+  };
 
-  },[])
+  const removeHoverClass = () => {
+    // imageRef.current.classList.remove('image-blur')
+    setIsImageHovered(false);
+  };
 
   return (
     <article ref={cardRef} class="card">
-      <div className="card-image-wrapper">
+      <div
+        className="card-image-wrapper"
+        onMouseEnter={addHoverClass}
+        onMouseLeave={removeHoverClass}
+      >
         <LazyLoadedImage
           lazyloading={true}
           image={image}
           placeholderImage={placeholderImage}
           alt="Product Image"
-          className="card-image"
+          className={!isImageHovered ? "card-image" : `card-image image-blur`}
           width="264px"
           height="412px"
         />
@@ -75,7 +86,7 @@ const Card = ({ image }) => {
       </div>
       <div class="card-description">
         <span class="description1">Men Henley Neck </span>
-        <span class="description1">Full Sleeve Red Wine 1</span>
+        <span class="description1">Men Henley Neck </span>
         <div className="price-wrapper">
           <span class="price">&#8377; 399 </span>
           <span class="discount">

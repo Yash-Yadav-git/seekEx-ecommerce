@@ -1,0 +1,178 @@
+.product-details-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+
+.product-details-images-wrapper {
+  flex: 0 0 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
+.product-details-information {
+  flex: 1;
+  position: fixed;
+  left: 70%;
+  margin-left: 20px;
+}
+
+.product-details-image {
+  max-width: 100%;
+  height: auto;
+  width: calc(50% - 10px);
+}
+
+.product-details-information h1{
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+.product-details-information h3{
+    font-weight: 400;
+    font-size: 35px;
+  }
+  .product-details-information h4{
+    font-weight: 700;
+    font-size: 30px;
+  }
+
+  .product-size-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 30px;
+    justify-content: flex-start;
+  }
+
+  .product-sizes{
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    box-shadow: none;
+    border: 2px solid #e6e6e6;
+    font-weight: 400;
+    font-size: 18px;
+    background-image: linear-gradient(to right, black 0%, black 0%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.3s ease-in, color 0.3s ease-in;
+  }
+
+  .product-sizes:hover{
+    background-size: 100% 100%;
+    color: white;
+    cursor: pointer;
+  }
+
+  .product-details-cta{
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+    background-color: black;
+  }
+
+  .product-details-cta{
+    padding: 30px;
+    color: white;
+    font-size: 22px;
+    transition: all 0.3s ease-in;
+  }
+
+  .product-details-cta:hover{
+    cursor: pointer;
+    border-radius: 30px;
+    transform: 250ms;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .product-details-container{
+        flex-direction: column;
+    }
+    .product-details-information{
+        width: 100%;
+        margin-bottom: 20px;
+        position: static;
+    }
+    .product-sizes-wrapper{
+        width: 100%;
+        border: 2px solid black;
+    }
+
+    .product-sizes{
+        font-size: 20px;
+        padding: 15px;
+    }
+     .product-details-cta{
+        padding: 20px;
+        color: white;
+        font-size: 18px;
+      }
+  }
+@media screen and (max-width: 750px) {
+  .product-details-container {
+    flex-direction: column;
+  }
+  .product-details-information {
+    width: 100%;
+    position: static;
+  }
+  .product-details-images-wrapper {
+    width: 100%;
+  }
+  .product-details-image{
+    width: 100%;
+  }
+  .product-details-information h3{
+    font-weight: 400;
+    font-size: 25px;
+  }
+  .product-details-information h4{
+    font-weight: 700;
+    font-size: 22px;
+  }
+  .product-details-information h1{
+    font-weight: 700;
+    font-size: 40px;
+  }
+  .product-sizes{
+    font-size: 18px;
+    padding: 15px;
+  }
+  .product-details-cta{
+    padding: 18px;
+    color: white;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width:450px) {
+    .product-details-information h3{
+        font-weight: 400;
+        font-size: 17px;
+      }
+      .product-details-information h4{
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .product-details-information h1{
+        font-weight: 700;
+        font-size: 25px;
+      }
+      .product-sizes{
+        font-size: 14px;
+        padding: 10px;
+      }
+    .product-details-cta{
+        width: 70%;
+        padding: 15px;
+        color: white;
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+}
