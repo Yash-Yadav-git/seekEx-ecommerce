@@ -4,7 +4,6 @@ import banner from "../../static/homepage/banner.svg";
 import Header from "../../components/common-components/Header";
 import Categories from "../../components/common-components/Categories";
 import MiddleBannerSection from "../../components/common-components/mid-section/MiddleBannerSection";
-import Card from "../../components/common-components/Card";
 import productImage1 from "../../static/card-component/product-image-1.png";
 import productImage2 from "../../static/card-component/product-image-2.png";
 import productImage3 from "../../static/card-component/product-image-3.png";
@@ -18,8 +17,12 @@ import productCollectionPrinted from "../../static/homepage/product-collection-r
 import productCollectionOversized from "../../static/homepage/product-collection-oversized-1.svg";
 import productCollectionHalfSleeves from "../../static/homepage/product-collection-half-sleeves-1.svg";
 import banner3 from "../../static/homepage/banner-3.svg";
-import daimond from '../../static/homepage/diamond 1.svg'
-import discount from '../../static/homepage/discount 1.svg'
+import daimond from "../../static/homepage/diamond 1.svg";
+import discount from "../../static/homepage/discount 1.svg";
+import service1 from "../../static/homepage/service1.svg";
+import service2 from "../../static/homepage/service2.svg";
+import service3 from "../../static/homepage/service3.svg";
+import service4 from "../../static/homepage/service4.svg";
 
 const Homepage = () => {
   let tredingProducts = [
@@ -126,6 +129,30 @@ const Homepage = () => {
           <button className="hurryup-cta">
             <label>Shop Now</label>
           </button>
+        </div>
+      </div>
+
+      {/* Services section */}
+      <div className="services-section-container">
+        <div className="service-circle"></div>
+        <div className="service-circle-2"></div>
+        <div className="services-wrapper-outter">
+          <div className="service-wrapper">
+            <img src={service1} alt="services-provided" />
+            <span>7 Days Return</span>
+          </div>
+          <div className="service-wrapper">
+            <img src={service1} alt="services-provided" />
+            <span>7 Days Return</span>
+          </div>
+          <div className="service-wrapper">
+            <img src={service1} alt="services-provided" />
+            <span>7 Days Return</span>
+          </div>
+          <div className="service-wrapper">
+            <img src={service1} alt="services-provided" />
+            <span>7 Days Return</span>
+          </div>
         </div>
       </div>
     </div>
