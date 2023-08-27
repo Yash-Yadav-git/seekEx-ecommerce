@@ -3,6 +3,7 @@ import Banner from "../../components/common-components/Banner";
 import banner from "../../static/homepage/banner.svg";
 import Header from "../../components/common-components/Header";
 import Categories from "../../components/common-components/Categories";
+import MiddleBannerSection from "../../components/common-components/mid-section/MiddleBannerSection";
 
 const Homepage = () => {
   return (
@@ -10,6 +11,7 @@ const Homepage = () => {
           <Header />
       <Banner image={banner} />
       <Categories />
+      <MiddleBannerSection />
     </div>
   );
 };

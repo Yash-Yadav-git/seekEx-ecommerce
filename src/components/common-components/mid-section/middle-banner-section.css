@@ -1,0 +1,26 @@
+.product-category-banner-container{
+    width: 100%;
+    margin-top: 70px;
+}
+
+.product-category-banner-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    gap: 10px;
+}
+
+.product-category-section{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product-category-section img {
+    max-width: 100%; 
+    height: auto;
+}
+
+

@@ -27,12 +27,14 @@
     }
 }
 
+
+
 @media screen and (min-width: 1400px) {
     .categories-item img{
-        width: 350px;
+        width: 220px;
     }
     .categories-item{
-        font-size: 27px;
+        font-size: 18px;
     }
 }
 
